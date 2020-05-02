@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+
+    <TextView
+        android:id="@+id/text_plain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="请选择参与SPP计算的卫星系统:" />
+
+    <CheckBox
+        android:id="@+id/cb_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_plain"
+        android:layout_margin="5dp"
+        android:text="GPS" />
+
+    <CheckBox
+        android:id="@+id/cb_galileo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_plain"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/cb_gps"
+        android:text="GALILEO" />
+
+    <CheckBox
+        android:id="@+id/cb_glonass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_plain"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/cb_galileo"
+        android:text="GLONASS" />
+
+    <CheckBox
+        android:id="@+id/cb_beidou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_plain"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/cb_glonass"
+        android:text="BEIDOU" />
+
+
+
+
+    <Button
+        android:id="@+id/bt_ftp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_plain"
+
+        android:text="通过FTP下载导航电文"
+
+        android:layout_marginTop="60dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_ftp"
+        android:layout_marginTop="25dp"
+        android:text="开始"
+        android:id="@+id/bt_start"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_start"
+        android:layout_marginTop="10dp"
+        android:text="结束"
+        android:id="@+id/bt_stop"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bt_stop"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="never"
+        android:paddingEnd="18dp"
+        android:paddingStart="18dp"
+        android:paddingTop="10dp"
+        android:requiresFadingEdge="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blackgray"
+            android:textColor="@color/white"
+            android:text="详细结果展示:"
+            android:id="@+id/text_log"
+            android:textSize="12sp"/>
+    </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>
